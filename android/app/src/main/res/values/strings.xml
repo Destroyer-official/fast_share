@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Fast Share</string>
+    <string name="server_online">SERVER ONLINE</string>
+    <string name="server_offline">SERVER OFFLINE</string>
+    <string name="tab_files">Files</string>
+    <string name="tab_radar">Radar</string>
+    <string name="tab_transfers">Activity</string>
+    <string name="btn_upload">Send</string>
+    <string name="radar_title">Nearby Devices</string>
+    <string name="radar_searching">Scanning local Wi-Fi for peers…</string>
+    <string name="storage_permission_required">Storage access required</string>
+</resources>

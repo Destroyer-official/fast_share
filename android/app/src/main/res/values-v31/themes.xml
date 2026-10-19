@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FastShare" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand & Material Tokens -->
+        <item name="colorPrimary">@color/accent_pulse</item>
+        <item name="colorPrimaryInverse">@color/aurora_deep_bg</item>
+        <item name="colorSecondary">@color/accent_indigo</item>
+        <item name="colorTertiary">@color/accent_purple</item>
+        <item name="colorSurface">@color/glass_surface_elevated</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/glass_surface_card</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/glass_stroke</item>
+
+        <!-- Window & Edge-to-Edge System Bars -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/aurora_deep_bg</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <!-- Splash -->
+        <item name="android:windowSplashScreenBackground">@color/aurora_deep_bg</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+    </style>
+</resources>

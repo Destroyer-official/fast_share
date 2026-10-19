@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Liquid Glass capsule — floating bottom dock. Same material as the header,
+     slightly stronger body so thumb-zone labels stay readable over content. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="34dp" />
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="@color/glass_stroke_specular"
+                android:centerColor="@color/glass_stroke"
+                android:endColor="@color/glass_stroke_subtle" />
+        </shape>
+    </item>
+    <item android:left="1dp" android:top="1dp" android:right="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="33dp" />
+            <solid android:color="@color/glass_panel_strong" />
+        </shape>
+    </item>
+    <item android:gravity="top|fill_horizontal" android:left="24dp" android:right="24dp" android:top="1.5dp">
+        <shape android:shape="rectangle">
+            <size android:width="1dp" android:height="1dp" />
+            <solid android:color="@color/glass_stroke_specular" />
+        </shape>
+    </item>
+</layer-list>

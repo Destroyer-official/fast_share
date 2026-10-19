@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/clay_card"
+    android:elevation="@dimen/z_card"
+    android:outlineSpotShadowColor="@color/clay_shadow_tint"
+    android:orientation="vertical"
+    android:minHeight="150dp"
+    android:padding="16dp">
+
+    <!-- Device identity row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDeviceIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/glass_status_pill"
+            android:gravity="center"
+            android:text="💻"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDeviceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:singleLine="true"
+                    android:text="Windows PC"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvDeviceBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/glass_badge_emerald"
+                    android:letterSpacing="0.08"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"
+                    android:text="ONLINE"
+                    android:textColor="@color/text_emerald"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDeviceIp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="monospace"
+                android:text="192.168.31.182:8000"
+                android:textColor="@color/text_subtle"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/dot_on" />
+    </LinearLayout>
+
+    <!-- Actions: one primary + one tonal (Expressive key-action pairing) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnSendToDevice"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/clay_button_primary"
+            android:clickable="true"
+            android:contentDescription="Send files to this device"
+            android:focusable="true"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="⚡ SEND FILES"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/btnBrowseDevice"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/clay_button_tonal"
+            android:clickable="true"
+            android:contentDescription="Browse this device"
+            android:focusable="true"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="BROWSE"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>

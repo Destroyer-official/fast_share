@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Deep Cosmic Obsidian Base Canvas -->
+    <path
+        android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="12"
+                android:startY="12"
+                android:endX="96"
+                android:endY="96"
+                android:type="linear">
+                <item android:color="#0F172A" android:offset="0.0" />
+                <item android:color="#090E26" android:offset="0.45" />
+                <item android:color="#060A1E" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Ambient Cosmic Aurora Radial Orbs -->
+    <!-- Cyan Top-Left Glow -->
+    <path
+        android:pathData="M54,54m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="26"
+                android:centerY="24"
+                android:gradientRadius="44"
+                android:type="radial">
+                <item android:color="#550284C7" android:offset="0.0" />
+                <item android:color="#200284C7" android:offset="0.5" />
+                <item android:color="#000284C7" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Indigo / Violet Bottom-Right Aurora Orb -->
+    <path
+        android:pathData="M54,54m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="82"
+                android:centerY="84"
+                android:gradientRadius="46"
+                android:type="radial">
+                <item android:color="#657C3AED" android:offset="0.0" />
+                <item android:color="#257C3AED" android:offset="0.55" />
+                <item android:color="#007C3AED" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Emerald Local Gigabit Speed Sweep (Center-Bottom) -->
+    <path
+        android:pathData="M54,54m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="48"
+                android:centerY="90"
+                android:gradientRadius="36"
+                android:type="radial">
+                <item android:color="#3510B981" android:offset="0.0" />
+                <item android:color="#0010B981" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Concentric Wireless Radar Discovery Rings (Subtle Liquid Ripple) -->
+    <path
+        android:pathData="M54,54m-27,0a27,27 0,1 1,54 0a27,27 0,1 1,-54 0"
+        android:strokeWidth="1"
+        android:strokeColor="#2538BDF8" />
+    <path
+        android:pathData="M54,54m-37,0a37,37 0,1 1,74 0a37,37 0,1 1,-74 0"
+        android:strokeWidth="0.8"
+        android:strokeColor="#18818CF8" />
+    <path
+        android:pathData="M54,54m-47,0a47,47 0,1 1,94 0a47,47 0,1 1,-94 0"
+        android:strokeWidth="0.6"
+        android:strokeColor="#1038BDF8" />
+
+    <!-- Frosted Glass Elevation Disc (Apple Liquid Glass Core) -->
+    <path
+        android:pathData="M54,54m-31,0a31,31 0,1 1,62 0a31,31 0,1 1,-62 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="32"
+                android:startY="28"
+                android:endX="76"
+                android:endY="80"
+                android:type="linear">
+                <item android:color="#24FFFFFF" android:offset="0.0" />
+                <item android:color="#0CFFFFFF" android:offset="0.55" />
+                <item android:color="#04FFFFFF" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Specular Highlight Rim on Glass Core -->
+    <path
+        android:pathData="M54,54m-31,0a31,31 0,1 1,62 0a31,31 0,1 1,-62 0"
+        android:strokeWidth="1.2">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="30"
+                android:startY="24"
+                android:endX="78"
+                android:endY="84"
+                android:type="linear">
+                <item android:color="#60FFFFFF" android:offset="0.0" />
+                <item android:color="#1AFFFFFF" android:offset="0.5" />
+                <item android:color="#00FFFFFF" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/remoteRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/aurora_canvas"
+    android:fitsSystemWindows="false">
+
+    <!-- LIQUID GLASS REMOTE HEADER -->
+    <LinearLayout
+        android:id="@+id/remoteGlassHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/glass_panel_header"
+        android:elevation="@dimen/z_glass"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:minHeight="56dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="6dp">
+
+        <!-- Back / Close orb -->
+        <FrameLayout
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/glass_circle_btn"
+            android:contentDescription="Go back or close">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_close"
+                android:tint="@color/text_primary" />
+        </FrameLayout>
+
+        <!-- Device Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDeviceIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💻"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvDeviceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLines="1"
+                    android:text="Remote Device"
+                    android:textColor="@color/text_primary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDeviceSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="ONLINE • 192.168.31.182:8000"
+                android:textColor="@color/text_emerald"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- View Mode (Grid vs List) -->
+        <ImageView
+            android:id="@+id/btnViewMode"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/glass_circle_btn"
+            android:contentDescription="Switch View Mode"
+            android:padding="8dp"
+            android:src="@drawable/ic_list"
+            android:tint="@color/text_secondary" />
+
+        <!-- Toggle Native vs Web Mode -->
+        <ImageView
+            android:id="@+id/btnToggleMode"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/glass_circle_btn"
+            android:contentDescription="Toggle Web Mode"
+            android:padding="8dp"
+            android:src="@drawable/ic_globe"
+            android:tint="@color/text_secondary" />
+
+        <!-- Security / Password management orb -->
+        <ImageView
+            android:id="@+id/btnSecurity"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/glass_circle_btn"
+            android:contentDescription="Security &amp; Password"
+            android:padding="8dp"
+            android:src="@drawable/ic_shield"
+            android:tint="@color/accent_cyan" />
+
+        <!-- Refresh orb -->
+        <ImageView
+            android:id="@+id/btnRefresh"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/glass_circle_btn"
+            android:contentDescription="Reload"
+            android:padding="8dp"
+            android:src="@drawable/ic_refresh"
+            android:tint="@color/text_secondary" />
+
+        <!-- Open External orb -->
+        <ImageView
+            android:id="@+id/btnOpenExternal"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/glass_circle_btn"
+            android:contentDescription="Open in external browser"
+            android:padding="8dp"
+            android:src="@drawable/ic_open_new"
+            android:tint="@color/text_secondary" />
+    </LinearLayout>
+
+    <!-- Sleek Progress Indicator -->
+    <ProgressBar
+        android:id="@+id/browserProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="@color/accent_cyan"
+        android:progressBackgroundTint="@android:color/transparent"
+        android:visibility="gone" />
+
+    <!-- Main Container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 100% NATIVE REMOTE EXPLORER -->
+        <LinearLayout
+            android:id="@+id/layoutNativeExplorer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Search / Filter Input Field -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/glass_input_field"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_search"
+                    android:tint="@color/text_subtle" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="sans-serif"
+                    android:hint="Search files or folders..."
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/btnClearSearch"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_close"
+                    android:tint="@color/text_muted"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Breadcrumbs Navigation Bar -->
+            <HorizontalScrollView
+                android:id="@+id/hsvBreadcrumbs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="6dp"
+                android:fillViewport="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llBreadcrumbs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <!-- Files & Folders Container -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRemoteFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="6dp"
+                    android:paddingBottom="24dp"
+                    android:scrollbars="vertical" />
+
+                <!-- Loading Spinner & Label -->
+                <LinearLayout
+                    android:id="@+id/layoutLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:indeterminateTint="@color/accent_cyan" />
+
+                    <TextView
+                        android:id="@+id/tvLoadingMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Loading remote files..."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Empty State -->
+                <LinearLayout
+                    android:id="@+id/layoutEmpty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📂"
+                        android:textSize="44sp" />
+
+                    <TextView
+                        android:id="@+id/tvEmptyTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="No Items Found"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvEmptySubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif"
+                        android:text="This directory is empty or no files match search."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- WEBVIEW MODE (Fallback / External) -->
+        <WebView
+            android:id="@+id/remoteWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!-- Error Container -->
+        <LinearLayout
+            android:id="@+id/layoutError"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/tvErrorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Cannot Connect to Device"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvErrorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:text="Please check that both devices are connected to the same Wi-Fi network and Fast Share is running."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btnRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/glass_chip_accent"
+                android:gravity="center"
+                android:paddingHorizontal="24dp"
+                android:text="RETRY CONNECTION"
+                android:textColor="@color/text_cyan"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

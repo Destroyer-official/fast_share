@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layer 0 — Environment: deep aurora space. Gives glass something to
+     refract and clay something to float over. One light source: top. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base vertical falloff -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="@color/aurora_mesh_start"
+                android:centerColor="@color/aurora_mesh_center"
+                android:endColor="@color/aurora_mesh_end" />
+        </shape>
+    </item>
+    <!-- Ambient cyan glow, top-left -->
+    <item android:left="-120dp" android:top="-160dp" android:right="120dp" android:bottom="420dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="320dp"
+                android:startColor="@color/aurora_glow_cyan"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+    <!-- Ambient violet glow, mid-right -->
+    <item android:left="160dp" android:top="180dp" android:right="-140dp" android:bottom="-60dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="360dp"
+                android:startColor="@color/aurora_glow_violet"
+                android:endColor="#00000000" />
+        </shape>
+    </item>
+</layer-list>

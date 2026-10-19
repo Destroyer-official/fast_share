@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================================ -->
+    <!-- AURORA DAY — Light variant (same hues, inverted luminance)   -->
+    <!-- ============================================================ -->
+    <color name="ic_launcher_background">#070B14</color>
+
+    <!-- Environment canvas -->
+    <color name="aurora_deep_bg">#EFF3FA</color>
+    <color name="aurora_mesh_start">#E2EBFA</color>
+    <color name="aurora_mesh_center">#F2F5FB</color>
+    <color name="aurora_mesh_end">#E8EEF8</color>
+    <color name="aurora_glow_cyan">#24245BDB</color>
+    <color name="aurora_glow_violet">#1F7A4DFF</color>
+
+    <!-- Layer 2 — Liquid Glass instruments -->
+    <color name="glass_panel">#DBFFFFFF</color>
+    <color name="glass_panel_strong">#E8FFFFFF</color>
+    <color name="glass_surface_base">#DBFFFFFF</color>
+    <color name="glass_surface">#E3FFFFFF</color>
+    <color name="glass_surface_elevated">#FFFFFFFF</color>
+    <color name="glass_surface_sheet">#FFFFFFFF</color>
+    <color name="glass_surface_card">#FFFFFFFF</color>
+    <color name="glass_surface_light">#FFF3F6FC</color>
+    <color name="glass_surface_input">#FFE9EDF4</color>
+    <color name="glass_surface_tonal">#FFE3EBFF</color>
+
+    <color name="glass_stroke">#330B1E3C</color>
+    <color name="glass_stroke_specular">#FFFFFFFF</color>
+    <color name="glass_stroke_focused">#FF245BDB</color>
+    <color name="glass_stroke_subtle">#140B1E3C</color>
+    <color name="glass_stroke_glow">#33245BDB</color>
+
+    <!-- Layer 1 — Clay content surfaces -->
+    <color name="clay_card">#FFFFFFFF</color>
+    <color name="clay_card_raised">#FFFFFFFF</color>
+    <color name="clay_hero_start">#FFFFFFFF</color>
+    <color name="clay_hero_end">#FFEFF4FB</color>
+    <color name="clay_inner_hi">#FFFFFFFF</color>
+    <color name="clay_inner_shade">#0A0B1E3C</color>
+    <color name="clay_shadow_tint">#40245BDB</color>
+    <color name="thumb_well">#FFECEFF6</color>
+
+    <!-- Neumorphic inset wells -->
+    <color name="neu_shadow_dark">#1F0B1E3C</color>
+    <color name="neu_shadow_light">#FFFFFFFF</color>
+
+    <!-- Accents -->
+    <color name="accent_cyan">#FF245BDB</color>
+    <color name="accent_cyan_dark">#FF1745A6</color>
+    <color name="accent_indigo">#FF245BDB</color>
+    <color name="accent_purple">#FF6A4DFF</color>
+    <color name="accent_pink">#FFD95745</color>
+    <color name="accent_pulse">#FF245BDB</color>
+    <color name="accent_pulse_end">#FF6A4DFF</color>
+    <color name="accent_pulse_pressed">#FF1B45AD</color>
+    <color name="accent_emerald">#FF0E8A74</color>
+    <color name="accent_emerald_dark">#FF0B5B4E</color>
+    <color name="accent_rose">#FFD64541</color>
+    <color name="accent_rose_dark">#FF8C2C25</color>
+    <color name="accent_amber">#FF9A6200</color>
+    <color name="accent_amber_dark">#FF704500</color>
+
+    <!-- Status -->
+    <color name="status_green">#FF0E8A74</color>
+    <color name="status_green_glow">#330E8A74</color>
+    <color name="status_amber">#FF9A6200</color>
+    <color name="status_amber_glow">#339A6200</color>
+    <color name="status_red">#FFD64541</color>
+    <color name="status_red_glow">#33D64541</color>
+
+    <!-- Typography ramp -->
+    <color name="text_high_contrast">#FF0B1220</color>
+    <color name="text_primary">#FF0E1626</color>
+    <color name="text_secondary">#FF54607A</color>
+    <color name="text_medium">#FF54607A</color>
+    <color name="text_subtle">#FF6E7A92</color>
+    <color name="text_muted">#FF8A94A8</color>
+    <color name="text_cyan">#FF245BDB</color>
+    <color name="text_emerald">#FF0E8A74</color>
+    <color name="text_amber">#FF9A6200</color>
+
+    <color name="input_surface">#FFE9EDF4</color>
+    <color name="drag_handle">#FFB9C2D2</color>
+    <color name="scrim_preview">#FA04060C</color>
+    <color name="badge_tint_emerald">#1F0E8A74</color>
+    <color name="badge_tint_amber">#1F9A6200</color>
+    <color name="badge_tint_neutral">#0F0B1E3C</color>
+    <color name="badge_tint_pulse">#1F245BDB</color>
+</resources>

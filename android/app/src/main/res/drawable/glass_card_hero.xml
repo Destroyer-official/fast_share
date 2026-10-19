@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ambient Aurora Mesh Tint Behind Card -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="28dp" />
+            <gradient
+                android:angle="135"
+                android:startColor="#2038BDF8"
+                android:centerColor="#10818CF8"
+                android:endColor="#05A855F7"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Frosted Refractive Glass Acrylic Layer -->
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="27dp" />
+            <solid android:color="#1A2548D9" />
+            <stroke
+                android:width="1.2dp"
+                android:color="#35FFFFFF" />
+        </shape>
+    </item>
+    <!-- Specular Top Edge Light Inset -->
+    <item android:top="2dp" android:left="20dp" android:right="20dp" android:bottom="140dp">
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="26dp" android:topRightRadius="26dp" />
+            <gradient
+                android:angle="0"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#20FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

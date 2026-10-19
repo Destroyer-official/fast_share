@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 1. Ambient Drop Shadow Layer Under Emblem -->
+    <path
+        android:pathData="M59,25 L37,55 L53,55 L45,89 L73,51 L57,51 Z"
+        android:fillColor="#50000000" />
+
+    <!-- 2. Gigabit Speed Pulse Wave - Left (Cyan Glow) -->
+    <path
+        android:pathData="M31,41 L24,53 L31,65"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="24"
+                android:startY="41"
+                android:endX="31"
+                android:endY="65"
+                android:type="linear">
+                <item android:color="#0038BDF8" android:offset="0.0" />
+                <item android:color="#DD38BDF8" android:offset="0.5" />
+                <item android:color="#0038BDF8" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 3. Gigabit Speed Pulse Wave - Right (Violet Glow) -->
+    <path
+        android:pathData="M77,43 L84,55 L77,67"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="77"
+                android:startY="43"
+                android:endX="84"
+                android:endY="67"
+                android:type="linear">
+                <item android:color="#00A855F7" android:offset="0.0" />
+                <item android:color="#DDA855F7" android:offset="0.5" />
+                <item android:color="#00A855F7" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 4. Liquid Glass Lightning Bolt Base Body -->
+    <path
+        android:pathData="M58,22 L36,54 L52,54 L44,86 L72,48 L56,48 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="36"
+                android:startY="22"
+                android:endX="72"
+                android:endY="86"
+                android:type="linear">
+                <item android:color="#FFFFFF" android:offset="0.0" />
+                <item android:color="#38BDF8" android:offset="0.32" />
+                <item android:color="#818CF8" android:offset="0.68" />
+                <item android:color="#C084FC" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 5. Glass Specular Edge Highlight (Light Reflection across left flank) -->
+    <path
+        android:pathData="M58,22 L36,54 L52,54 L44,86 L47,81 L54,52 L39,52 L56,24 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="36"
+                android:startY="22"
+                android:endX="56"
+                android:endY="86"
+                android:type="linear">
+                <item android:color="#BFFFFFFF" android:offset="0.0" />
+                <item android:color="#60FFFFFF" android:offset="0.45" />
+                <item android:color="#00FFFFFF" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 6. Bottom Tip Emerald Accelerator Flare -->
+    <path
+        android:pathData="M44,86 L49,76 L54,80 Z"
+        android:fillColor="#4034D399" />
+
+    <!-- 7. Specular Core Sparkle Glint (Prismatic Refraction Point) -->
+    <path
+        android:pathData="M53,50 L55,54 L59,54 L56,56 L57,60 L53,57 L49,60 L50,56 L47,54 L51,54 Z"
+        android:fillColor="#E0FFFFFF" />
+</vector>

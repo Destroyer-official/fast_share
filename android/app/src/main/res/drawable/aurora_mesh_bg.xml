@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Deep void background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#060A1E" />
+        </shape>
+    </item>
+    <!-- Soft diagonal aurora gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:startColor="#1E1B4B"
+                android:centerColor="#0B132B"
+                android:endColor="#060A1E"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Electric Cyan glow sweep from top-left -->
+    <item android:bottom="450dp" android:right="80dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#250284C7"
+                android:endColor="#00000000"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Neon Violet glow sweep from top-right -->
+    <item android:bottom="450dp" android:left="80dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:startColor="#257C3AED"
+                android:endColor="#00000000"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Bottom ambient cyan glow -->
+    <item android:top="500dp" android:left="40dp" android:right="40dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:startColor="#1838BDF8"
+                android:endColor="#00000000"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

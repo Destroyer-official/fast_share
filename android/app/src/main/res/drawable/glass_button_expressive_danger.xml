@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#40FFFFFF">
+    <item>
+        <layer-list>
+            <!-- Ambient Glow Outer Ring -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="99dp" />
+                    <solid android:color="#25F43F5E" />
+                </shape>
+            </item>
+            <!-- Vibrant Rose Gradient Core -->
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="1dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="99dp" />
+                    <gradient
+                        android:angle="90"
+                        android:startColor="#BE123C"
+                        android:centerColor="#E11D48"
+                        android:endColor="#FB7185"
+                        android:type="linear" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="#60FFFFFF" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</ripple>

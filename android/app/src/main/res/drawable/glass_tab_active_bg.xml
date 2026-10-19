@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Active dock tab — tinted glass capsule with accent rim + ripple.
+     Referenced from MainActivity.switchTab via setBackgroundResource. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#404D7CFE">
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="999dp" />
+                    <gradient
+                        android:type="linear"
+                        android:angle="270"
+                        android:startColor="@color/glass_stroke_glow"
+                        android:endColor="@color/glass_stroke_subtle" />
+                </shape>
+            </item>
+            <item android:left="1dp" android:top="1dp" android:right="1dp" android:bottom="1dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="999dp" />
+                    <solid android:color="@color/badge_tint_pulse" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</ripple>

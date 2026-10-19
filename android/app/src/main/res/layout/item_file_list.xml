@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="6dp"
+    android:layout_marginVertical="4dp"
+    android:background="@drawable/clay_card"
+    android:elevation="@dimen/z_card"
+    android:outlineSpotShadowColor="@color/clay_shadow_tint"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:minHeight="72dp"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="10dp">
+
+    <!-- Inset thumbnail well -->
+    <FrameLayout
+        android:id="@+id/thumbContainer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="File preview"
+        android:background="@drawable/thumb_well"
+        android:clipToOutline="true">
+
+        <ImageView
+            android:id="@+id/ivThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvFolderIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="📁"
+            android:textSize="22sp" />
+
+        <FrameLayout
+            android:id="@+id/videoBadge"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="2dp"
+            android:background="@drawable/glass_circle_btn"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_play_arrow"
+                android:tint="@color/accent_cyan" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- Title + meta -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            tools:text="Document.pdf" />
+
+        <TextView
+            android:id="@+id/tvFileMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_subtle"
+            android:textSize="11sp"
+            tools:text="4.2 MB • 22/9/2026" />
+    </LinearLayout>
+
+    <!-- Action pill -->
+    <TextView
+        android:id="@+id/btnAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glass_pill_cyan"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:minWidth="64dp"
+        android:minHeight="36dp"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="8dp"
+        android:text="Open"
+        android:textColor="@color/text_cyan"
+        android:textSize="11sp"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

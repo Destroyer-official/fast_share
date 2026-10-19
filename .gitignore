@@ -1,0 +1,65 @@
+# ==============================================================================
+# FastShare Production .gitignore
+# ==============================================================================
+
+# Credentials & Secrets (CRITICAL)
+.fastshare_cred.json
+*.pem
+*.key
+*.keystore
+*.jks
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+
+# Rust
+fastshare_rs/target/
+target/
+**/*.rs.bk
+
+# Android & Gradle
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+.gradle/
+build/
+*.apk
+*.aab
+*.ap_
+output-metadata.json
+
+# Local Testing Dumps & Temp Files
+scratch/
+scratch_test/
+*.bin
+*.part-*
+*.exe
+test_picker.xml
+ui_dump*.xml
+test_ui*.xml
+local_dump*.xml
+local_browser*.xml
+local_picker*.xml
+*.log
+
+# Root-level test screenshots (Clean repo: curated screenshots live in assets/screenshots/)
+/*.png
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

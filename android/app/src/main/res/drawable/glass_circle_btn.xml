@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Glass orb button — circular instrument control. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="@color/glass_stroke_specular"
+                android:centerColor="@color/glass_stroke"
+                android:endColor="@color/glass_stroke_subtle" />
+        </shape>
+    </item>
+    <item android:left="1dp" android:top="1dp" android:right="1dp" android:bottom="1dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/glass_panel" />
+        </shape>
+    </item>
+</layer-list>

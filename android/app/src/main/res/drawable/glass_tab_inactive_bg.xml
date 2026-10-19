@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inactive dock tab — transparent, ripple-only feedback.
+     Referenced from MainActivity.switchTab via setBackgroundResource. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#2E4D7CFE">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="999dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</ripple>

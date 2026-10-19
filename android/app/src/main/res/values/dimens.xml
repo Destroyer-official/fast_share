@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Touch & spacing -->
+    <dimen name="touch_target">48dp</dimen>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <!-- Shape scale (M3 Expressive, restrained) -->
+    <dimen name="radius_xs">10dp</dimen>
+    <dimen name="radius_sm">14dp</dimen>
+    <dimen name="radius_md">20dp</dimen>
+    <dimen name="radius_lg">28dp</dimen>
+    <dimen name="surface_radius">20dp</dimen>
+    <dimen name="row_radius">14dp</dimen>
+
+    <!-- Spatial z-tiers -->
+    <dimen name="z_card">3dp</dimen>
+    <dimen name="z_sheet">8dp</dimen>
+    <dimen name="z_glass">12dp</dimen>
+    <dimen name="z_fab">14dp</dimen>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scrim_preview">
+
+    <!-- Media content: pure black stage, glass NEVER touches media -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivPreviewFull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <VideoView
+            android:id="@+id/vvPreviewFull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pbPreviewLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/accent_cyan"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Floating glass top bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/glass_panel_header"
+        android:elevation="@dimen/z_glass"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:id="@+id/tvPreviewIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🖼️"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPreviewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                tools:text="Photo_2026.jpg" />
+
+            <TextView
+                android:id="@+id/tvPreviewMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                tools:text="3.2 MB • Image" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/btnClosePreview"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/glass_circle_btn"
+            android:contentDescription="Close preview">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_close"
+                android:tint="@color/text_primary" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Floating share pill -->
+    <TextView
+        android:id="@+id/btnShareFile"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/clay_button_primary"
+        android:elevation="@dimen/z_glass"
+        android:gravity="center"
+        android:letterSpacing="0.06"
+        android:minWidth="200dp"
+        android:paddingHorizontal="26dp"
+        android:text="↗ SEND / SHARE"
+        android:textColor="#FFFFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+</FrameLayout>

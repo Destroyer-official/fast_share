@@ -1,0 +1,73 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-binaries:
+    name: Build Native Executables
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            target: x86_64-pc-windows-msvc
+            binary: fastshare.exe
+            asset: fastshare-windows-x64.exe
+          - os: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+            binary: fastshare_rs
+            asset: fastshare-linux-x64
+          - os: macos-latest
+            target: x86_64-apple-darwin
+            binary: fastshare_rs
+            asset: fastshare-macos-x64
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Build Release Binary
+        run: |
+          cargo build --release --manifest-path fastshare_rs/Cargo.toml
+      - name: Stage Artifact
+        shell: bash
+        run: |
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            cp fastshare_rs/target/release/fastshare_rs.exe ${{ matrix.asset }}
+          else
+            cp fastshare_rs/target/release/fastshare_rs ${{ matrix.asset }}
+            chmod +x ${{ matrix.asset }}
+          fi
+      - name: Upload Binary
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ matrix.asset }}
+
+  build-android-apk:
+    name: Build Android Release APK
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+      - name: Build Android Release APK
+        run: |
+          cd android
+          ./gradlew assembleRelease --no-daemon
+      - name: Stage APK
+        run: |
+          cp android/app/build/outputs/apk/release/*.apk FastShare-release.apk
+      - name: Upload APK to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: FastShare-release.apk

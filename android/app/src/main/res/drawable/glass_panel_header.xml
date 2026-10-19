@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Liquid Glass capsule — floating header. Gradient edge (specular top),
+     translucent tinted body, hairline highlight under the top rim. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Edge: light-refracting rim, bright at top fading down -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="32dp" />
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="@color/glass_stroke_specular"
+                android:centerColor="@color/glass_stroke"
+                android:endColor="@color/glass_stroke_subtle" />
+        </shape>
+    </item>
+    <!-- Body -->
+    <item android:left="1dp" android:top="1dp" android:right="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="31dp" />
+            <solid android:color="@color/glass_panel" />
+        </shape>
+    </item>
+    <!-- Inner specular line just under the top rim -->
+    <item android:gravity="top|fill_horizontal" android:left="20dp" android:right="20dp" android:top="1.5dp">
+        <shape android:shape="rectangle">
+            <size android:width="1dp" android:height="1dp" />
+            <solid android:color="@color/glass_stroke_specular" />
+        </shape>
+    </item>
+</layer-list>

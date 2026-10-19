@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Primary action — electric gradient clay pill with specular crown.
+     Exactly ONE of these per screen (M3 Expressive key-action rule). -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="999dp" />
+                    <gradient
+                        android:type="linear"
+                        android:angle="315"
+                        android:startColor="@color/accent_pulse_pressed"
+                        android:endColor="@color/accent_pulse" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="999dp" />
+                    <gradient
+                        android:type="linear"
+                        android:angle="315"
+                        android:startColor="@color/accent_pulse"
+                        android:endColor="@color/accent_pulse_end" />
+                </shape>
+            </item>
+            <!-- Specular crown -->
+            <item android:gravity="top|fill_horizontal" android:left="16dp" android:right="16dp" android:top="1.5dp">
+                <shape android:shape="rectangle">
+                    <size android:width="1dp" android:height="1.5dp" />
+                    <solid android:color="#59FFFFFF" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

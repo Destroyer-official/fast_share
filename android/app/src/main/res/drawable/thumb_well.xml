@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inset thumbnail well — media sits IN the card, not on it. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="14dp" />
+            <solid android:color="@color/thumb_well" />
+        </shape>
+    </item>
+    <item android:gravity="top|fill_horizontal" android:left="8dp" android:right="8dp" android:top="1dp">
+        <shape android:shape="rectangle">
+            <size android:width="1dp" android:height="2dp" />
+            <solid android:color="@color/neu_shadow_dark" />
+        </shape>
+    </item>
+    <item android:gravity="bottom|fill_horizontal" android:left="8dp" android:right="8dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <size android:width="1dp" android:height="1dp" />
+            <solid android:color="@color/neu_shadow_light" />
+        </shape>
+    </item>
+</layer-list>

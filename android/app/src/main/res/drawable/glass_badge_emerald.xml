@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Emerald state badge pill. Referenced from Java (permission gate, devices). -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="999dp" />
+            <solid android:color="@color/badge_tint_emerald" />
+            <stroke android:width="1dp" android:color="@color/status_green_glow" />
+        </shape>
+    </item>
+</layer-list>

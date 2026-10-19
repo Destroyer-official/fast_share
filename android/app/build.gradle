@@ -1,0 +1,39 @@
+plugins {
+    id("com.android.application")
+}
+
+android {
+    namespace = "com.fastshare.app"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.fastshare.app"
+        minSdk = 26
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        getByName("debug") {
+            applicationIdSuffix = ".debug"
+        }
+        getByName("release") {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.core:core:1.13.1")
+}

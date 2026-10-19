@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ambient Aurora Mesh Backing -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp" />
+            <gradient
+                android:angle="135"
+                android:startColor="#2538BDF8"
+                android:centerColor="#10818CF8"
+                android:endColor="#0510B981"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Frosted Refractive Glass Acrylic Layer -->
+    <item
+        android:top="1.2dp"
+        android:left="1.2dp"
+        android:right="1.2dp"
+        android:bottom="1.2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="23dp" />
+            <gradient
+                android:angle="160"
+                android:startColor="#332A4C78"
+                android:centerColor="#261E3858"
+                android:endColor="#1F142440"
+                android:type="linear" />
+            <stroke
+                android:width="1.2dp"
+                android:color="#40FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

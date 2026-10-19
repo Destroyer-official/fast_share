@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Clay content card — opaque, puffed: bright inner top highlight,
+     faint inner bottom shade, hairline rim. Contrast never depends on shadow. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp" />
+            <solid android:color="@color/clay_card" />
+            <stroke android:width="1dp" android:color="@color/glass_stroke_subtle" />
+        </shape>
+    </item>
+    <!-- Inner top highlight (the "clay puff" light catch) -->
+    <item android:gravity="top|fill_horizontal" android:left="14dp" android:right="14dp" android:top="1dp">
+        <shape android:shape="rectangle">
+            <size android:width="1dp" android:height="1dp" />
+            <solid android:color="@color/clay_inner_hi" />
+        </shape>
+    </item>
+    <!-- Inner bottom shade -->
+    <item android:gravity="bottom|fill_horizontal" android:left="14dp" android:right="14dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <size android:width="1dp" android:height="1dp" />
+            <solid android:color="@color/clay_inner_shade" />
+        </shape>
+    </item>
+</layer-list>

@@ -4535,6 +4535,9 @@ class DiscoveryBeacon(threading.Thread):
         self.username = username
         self.running = True
 
+    def stop(self):
+        self.running = False
+
     def probe_arp(self):
         lan = get_lan_ip()
         parts = lan.split(".")

@@ -1,0 +1,49 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve FastShare
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the sections below.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of FastShare is affected?
+      options:
+        - Python Server (share.py)
+        - Rust Core Engine (fastshare_rs)
+        - Android Application
+        - Web UI / Browser Client
+        - Ecosystem Radar Discovery (UDP 8002)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Start server with '...'
+        2. Open '...'
+        3. Attempt to upload/download '...'
+        4. See error
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating System / Environment
+      description: OS version, browser version, or Android version.
+      placeholder: "e.g. Windows 11 / Android 14 / Chrome 126"
+    validations:
+      required: true
